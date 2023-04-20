@@ -10,7 +10,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 // import modeul
 const commonConfig = require("./webpack.config");
 
-const devConfig = merge(commonConfig, {
+const prodConfig = merge(commonConfig, {
   mode: "production",
 
   output: {
@@ -46,4 +46,4 @@ const devConfig = merge(commonConfig, {
   },
 });
 
-module.exports = devConfig;
+module.exports = prodConfig;
