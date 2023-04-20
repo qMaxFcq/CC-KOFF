@@ -28,13 +28,7 @@ const devConfig = merge(commonConfig, {
     ],
   },
 
-  plugins: [
-    new MiniCssExtractPlugin(),
-    new CleanWebpackPlugin(),
-    new HtmlwebpackPlugin({
-      template: "./src/template/index.html",
-    }),
-  ],
+  plugins: [new MiniCssExtractPlugin(), new CleanWebpackPlugin()],
 
   optimization: {
     minimizer: [
@@ -42,7 +36,6 @@ const devConfig = merge(commonConfig, {
       new CssMinimizerPlugin(),
       new HtmlwebpackPlugin({
         template: "./src/template/index.html",
-        filename: "index.min.html",
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
