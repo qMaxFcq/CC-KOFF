@@ -36,6 +36,7 @@ const prodConfig = merge(commonConfig, {
       new CssMinimizerPlugin(),
       new HtmlwebpackPlugin({
         template: "./src/template/index.html",
+
         minify: {
           removeAttributeQuotes: true,
           collapseWhitespace: true,
